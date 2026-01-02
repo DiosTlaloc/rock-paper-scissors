@@ -48,7 +48,18 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-let getHumanSelection = getHumanChoice();
-let getComputerSelection = getComputerChoice();
-console.log(playRound(getHumanSelection, getComputerSelection));
-console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`);
+function playGame() {
+    let getHumanSelection = "";
+    let getComputerSelection = "";
+
+    for (let i = 0; i < 5; i++) {
+        getHumanSelection = getHumanChoice();
+        getComputerSelection = getComputerChoice();
+        console.log(playRound(getHumanSelection, getComputerSelection));
+    }
+
+    console.log(`Human Score: ${humanScore}, Computer Score: ${computerScore}`);
+    console.log("Thanks for Playing!");
+}
+
+playGame();
